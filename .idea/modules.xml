@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Exercises/Exercises.iml" filepath="$PROJECT_DIR$/Exercises/Exercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOP_2026/OOP_2026.iml" filepath="$PROJECT_DIR$/OOP_2026/OOP_2026.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SGU_OOP.iml" filepath="$PROJECT_DIR$/.idea/SGU_OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/abstract_25_10/abstract_25_10.iml" filepath="$PROJECT_DIR$/abstract_25_10/abstract_25_10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ex_OOP_1_11/ex_OOP_1_11.iml" filepath="$PROJECT_DIR$/ex_OOP_1_11/ex_OOP_1_11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercise_oop_java/exercise_oop_java.iml" filepath="$PROJECT_DIR$/exercise_oop_java/exercise_oop_java.iml" />
+    </modules>
+  </component>
+</project>

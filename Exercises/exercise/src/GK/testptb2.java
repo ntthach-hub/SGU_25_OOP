@@ -1,11 +1,6 @@
 package GK;
-
-
 import java.util.Arrays;
 import java.util.Random;
-
-import static GK.PTB2.giaodiem;
-import static GK.PTB2.tiepxucsongsong;
 
 public class testptb2 {
     public static void main(String[] args){
@@ -23,7 +18,8 @@ public class testptb2 {
             b = rd.nextInt(11 ) - 5;
             c = rd.nextInt(11) - 5;
 
-            arr[i] = new PTB2(a,b,c);
+            // CHU Y: constructor PTB2 nhan tham so theo thu tu (b1, c1, a1)
+            arr[i] = new PTB2(b, c, a);
         }
         // in ra phuong trinh va nghiem
         for (int i = 0; i < n; i++) {
@@ -31,15 +27,14 @@ public class testptb2 {
             System.out.println("Nghiem: " + arr[i].Solution());
             System.out.println("------------------------");
         }
-        /*  TEST CÂU 7: giao l1 và f  */
+        /*  TEST CAU 7: giao l1 va f  */
         Line l1 = new Line(1, 0);                   // y = x
         Quadratic f = new Quadratic(1, -4, 3);      // y = x^2 - 4x + 3
-        double[] xs = giaodiem(l1, f);
+        double[] xs = PTB2.giaodiem(l1, f);
         System.out.println("giao diem x: " + Arrays.toString(xs));
 
-        /* TEST CÂU 8: tiếp tuyến song song */
-        Line l2 = tiepxucsongsong(l1, f);
+        /* TEST CAU 8: tiep tuyen song song */
+        Line l2 = PTB2.tiepxucsongsong(l1, f);
         System.out.println("tiep xuc song song : " + l2);
     }
-
 }

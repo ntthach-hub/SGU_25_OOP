@@ -3,7 +3,7 @@ package bai2;
 public class Newspaper extends Document{
     private int releaseDate;
 
-    public Newspaper(int id, String publisher, int number, int releaseDate){
+    public Newspaper(String id, String publisher, int number, int releaseDate){
         super(id, publisher, number);
         this.releaseDate = releaseDate;
     }

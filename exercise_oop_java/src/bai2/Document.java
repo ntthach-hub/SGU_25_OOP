@@ -1,19 +1,19 @@
 package bai2;
 
 public class Document {
-    protected int id;
+    protected String id;
     protected String publisher;
     protected int number;
 
-    public Document(int id, String publisher, int number){
+    public Document(String id, String publisher, int number){
         this.id = id;
         this.publisher = publisher;
         this.number = number;
     }
-    public int getId() {
+    public String getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
     public String getPublisher() {

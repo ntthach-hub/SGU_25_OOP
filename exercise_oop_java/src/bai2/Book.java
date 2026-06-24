@@ -4,7 +4,7 @@ public class Book extends Document{
     private String author;
     private int numberPage;
 
-    public Book(int id, String publisher, int number, String author, int numberPage){
+    public Book(String id, String publisher, int number, String author, int numberPage){
         super(id, publisher, number);
         this.author = author;
         this.numberPage = numberPage;

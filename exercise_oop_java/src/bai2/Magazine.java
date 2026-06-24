@@ -4,7 +4,7 @@ public class Magazine extends Document{
     private int issueNumber;
     private int issueMonth;
 
-    public Magazine(int id, String publisher, int number, int issueNumber, int issueMonth){
+    public Magazine(String id, String publisher, int number, int issueNumber, int issueMonth){
         super(id, publisher, number);
         this.issueNumber = issueNumber;
         this.issueMonth = issueMonth;

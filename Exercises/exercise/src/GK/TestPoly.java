@@ -8,7 +8,6 @@ public class TestPoly {
         pl.add(1,2);
         pl.add(3,2);
         pl.add(4,2);
-
         // CAU 3
         System.out.println("da giac: " + pl);
 

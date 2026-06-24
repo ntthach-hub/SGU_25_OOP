@@ -7,7 +7,6 @@ public class testptb2 {
         Random rd = new Random();
         int n = 3;
         PTB2[] arr = new PTB2[n];
-
         for(int i = 0 ; i< n; i++){
             double a, b, c;
 

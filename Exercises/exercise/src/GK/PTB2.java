@@ -7,7 +7,6 @@ public class PTB2 extends PTB1{
         super(b1, c1);
         this.a = a1;
     }
-
     @Override
     public String Solution(){
         if(a == 0){

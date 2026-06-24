@@ -5,7 +5,6 @@ import java.util.List;
 
 public class Polygon {
     private ArrayList<Point> pts = new ArrayList<>();
-
     public static Polygon xaydagiac(List<Point> list){
         double sumX = 0, sumY=0;
         for(Point p: list){

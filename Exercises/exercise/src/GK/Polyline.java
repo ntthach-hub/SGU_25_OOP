@@ -89,7 +89,6 @@ public class Polyline {
         }
         return inside;
     }
-
     // CAU 6 - tim diem can bo de da giac (n-1) dinh co dien tich lon nhat
     // Thu lan luot bo tung diem, tinh lai dien tich, chon cai lon nhat
     public Point findVertexToRemove(){

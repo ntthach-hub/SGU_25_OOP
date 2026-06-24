@@ -8,7 +8,6 @@ public class PTB1 {
         this.b = b1;
         this.c = c1;
     }
-
     public String Solution(){
         if( b == 0){
             if( c== 0){

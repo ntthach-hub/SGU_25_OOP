@@ -10,6 +10,7 @@ public class Document {
         this.publisher = publisher;
         this.number = number;
     }
+
     public String getId() {
         return id;
     }

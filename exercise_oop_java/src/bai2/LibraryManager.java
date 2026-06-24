@@ -9,7 +9,6 @@ public class LibraryManager {
     public LibraryManager() {
         this.documents = new ArrayList<>();
     }
-
     // Method to add new document to the list
     public void addDocument(Document document) {
         this.documents.add(document);

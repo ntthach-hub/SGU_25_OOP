@@ -27,7 +27,6 @@ public class ManagerOfficer {
                 isFound = true;
             }
         }
-
         if (!isFound) {
             System.out.println("Not found any officer with name: " + name);
         }

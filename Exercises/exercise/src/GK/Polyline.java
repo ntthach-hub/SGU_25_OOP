@@ -18,6 +18,7 @@ public class Polyline {
         points.add(p);
     }
 
+    // CAU 3 - "ve" da giac n canh, in ra dang {(x1,y1)(x2,y2)...}
     public String toString(){
         String s = "{";
         for(int i = 0 ; i < points.size() ; i++){
@@ -27,6 +28,7 @@ public class Polyline {
         return s;
     }
 
+    // CAU 1c - chieu dai duong gap khuc (KHONG khep kin)
     public double getlength(){
         if(points.size() < 2) return 0;
 
@@ -36,6 +38,8 @@ public class Polyline {
         }
         return sum;
     }
+
+    // CAU 1c - chu vi (co noi diem cuoi ve diem dau)
     public double getPerimeter(){
         int n = points.size();
         if(n < 2) return 0;
@@ -47,6 +51,8 @@ public class Polyline {
         sum += points.get(n - 1).distance(points.get(0));
         return  sum;
     }
+
+    // CAU 1c, CAU 5 - dien tich da giac (cong thuc Shoelace)
     public double getArea(){
         int n = points.size();
         if(n < 3 ) return 0;
@@ -62,5 +68,46 @@ public class Polyline {
         sum += plast.getX() * pfirst.getY() - plast.getY() * pfirst.getX();
 
         return Math.abs(sum) / 2.0;
+    }
+
+    // CAU 4 - kiem tra diem p co nam trong da giac khong (thuat toan Ray Casting)
+    // Ke tia ngang tu p sang phai, dem so lan cat canh da giac
+    // Le -> trong, Chan -> ngoai
+    public boolean isInside(Point p){
+        int n = points.size();
+        boolean inside = false;
+        for(int i = 0, j = n - 1 ; i < n ; j = i++){
+            Point pi = points.get(i);
+            Point pj = points.get(j);
+
+            boolean canhBacQua = (pi.getY() > p.getY()) != (pj.getY() > p.getY());
+            if(canhBacQua){
+                double xGiao = (pj.getX() - pi.getX()) * (p.getY() - pi.getY())
+                        / (pj.getY() - pi.getY()) + pi.getX();
+                if(p.getX() < xGiao) inside = !inside;
+            }
+        }
+        return inside;
+    }
+
+    // CAU 6 - tim diem can bo de da giac (n-1) dinh co dien tich lon nhat
+    // Thu lan luot bo tung diem, tinh lai dien tich, chon cai lon nhat
+    public Point findVertexToRemove(){
+        int n = points.size();
+        double maxArea = -1;
+        int bestIndex = -1;
+
+        for(int i = 0 ; i < n ; i++){
+            ArrayList<Point> temp = new ArrayList<Point>(points);
+            temp.remove(i);
+            Polyline pl = new Polyline(temp);
+            double area = pl.getArea();
+
+            if(area > maxArea){
+                maxArea = area;
+                bestIndex = i;
+            }
+        }
+        return points.get(bestIndex);
     }
 }

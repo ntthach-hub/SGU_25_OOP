@@ -1,7 +1,5 @@
 package GK;
 
-import test1.point;
-
 import java.util.ArrayList;
 import java.util.List;
 

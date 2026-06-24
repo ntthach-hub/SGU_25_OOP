@@ -7,7 +7,6 @@ public class Newspaper extends Document{
         super(id, publisher, number);
         this.releaseDate = releaseDate;
     }
-
     public int getReleaseDate() {
         return releaseDate;
     }

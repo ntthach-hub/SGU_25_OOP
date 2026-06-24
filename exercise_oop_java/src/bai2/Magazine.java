@@ -9,7 +9,6 @@ public class Magazine extends Document{
         this.issueNumber = issueNumber;
         this.issueMonth = issueMonth;
     }
-
     public int getIssueNumber() {
         return issueNumber;
     }
@@ -35,4 +34,5 @@ public class Magazine extends Document{
                 ", number='" + number +'\''+
                 "}";
     }
+
 }
